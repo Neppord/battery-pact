@@ -1,3 +1,4 @@
+Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
 * [x] Set correct resolution for project 1920x1080
