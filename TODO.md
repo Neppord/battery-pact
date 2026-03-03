@@ -5,10 +5,11 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Set background image
 
 * [ ] Have an arrow to be moved up and down
-  * [ ] Show player 1 arrow
-  * [ ] Decide how many rows we have - 5?
+  * [x] Show player 1 arrow
+  * [x] Decide how many rows we have - 5?
   * [ ] Move player 1 arrow up when hitting w
   * [ ] Move player 1 arrow down when hitting s
+  * [ ] Stop movement at edges
   * [ ] Show player 2 arrow
   * [ ] Move player 2 arrow up when hitting w
   * [ ] Move player 2 arrow down when hitting s

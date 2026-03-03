@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dwmcgh7tyf2op" path="res://aseprite/neon-background.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://b0caa22bwxobf" path="res://aseprite/neon-player.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://w5bwj4rlpixb" path="res://player_1_arrow.gd" id="3_h2yge"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -47,7 +48,9 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_ig7tw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27252123]
-position = Vector2(101, 244)
+position = Vector2(101, 235.00002)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_272bh")
-frame_progress = 0.8765789
+frame = 2
+frame_progress = 0.45285094
+script = ExtResource("3_h2yge")
