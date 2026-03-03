@@ -1,10 +1,16 @@
 ## Important stuff!
 
+* [x] Set correct resolution for project 1920x1080
+* [ ] Set background image
+
 * [ ] Have an arrow to be moved up and down
-  * [ ] Show an arrow
-  * [ ] Move arrow up with w and arrow up
-  * [ ] Move arrow down with s and arrow down
+  * [ ] Show player 1 arrow
   * [ ] Decide how many rows we have - 5?
+  * [ ] Move player 1 arrow up when hitting w
+  * [ ] Move player 1 arrow down when hitting s
+  * [ ] Show player 2 arrow
+  * [ ] Move player 2 arrow up when hitting w
+  * [ ] Move player 2 arrow down when hitting s
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
