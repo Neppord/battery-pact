@@ -1,7 +1,7 @@
 ## Important stuff!
 
 * [x] Set correct resolution for project 1920x1080
-* [ ] Set background image
+* [x] Set background image
 
 * [ ] Have an arrow to be moved up and down
   * [ ] Show player 1 arrow
