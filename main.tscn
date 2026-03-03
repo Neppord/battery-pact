@@ -51,6 +51,7 @@ texture = ExtResource("1_ig7tw")
 position = Vector2(101, 235.00002)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_272bh")
+autoplay = "default"
 frame = 2
 frame_progress = 0.45285094
 script = ExtResource("3_h2yge")
