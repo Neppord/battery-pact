@@ -16,7 +16,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
       * 395
       * 555
       * 715
-    * [ ] Create a list of all valid y positions
+    * [x] Create a list of all valid y positions
     * [ ] Give the arrow a index representing the lane the arrow is in
     * [ ] Change the index when using w and s 
           then use that index and array to set the y position
