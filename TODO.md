@@ -1,6 +1,7 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
+* [ ] Play backround music
 * [ ] Play sound when car is spawned
 * [ ] Play sound when toy collides
 * [ ] Give (max) charge to toys when spawned
