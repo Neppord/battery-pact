@@ -21,7 +21,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
     * [x] Change the index when using w and s 
           then use that index and array to set the y position
   * [x] Stop movement at edges
-  * [ ] Refactor movement stopping code
+  * [x] Refactor movement stopping code
   * [ ] Show player 2 arrow
   * [ ] Move player 2 arrow up when hitting w
   * [ ] Move player 2 arrow down when hitting s

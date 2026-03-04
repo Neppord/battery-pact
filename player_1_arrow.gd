@@ -25,9 +25,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("player_1_down"):
 		lane += 1
 	
-	if lane < 0 :
-		lane = 0
-	if 4 < lane:
-		lane = 4
+	lane = clampi(lane, 0, player_positions.size() - 1)
 
 	self.position.y = player_positions[lane]
