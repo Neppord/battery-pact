@@ -28,7 +28,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [ ] Create toy scene
   * [x] Scene file - character2d node
-  * [ ] Toy collision
+  * [x] Toy collision
   * [ ] Toy sprite
   * [ ] Toy Insantiation
   * [ ] Toy movement
