@@ -31,6 +31,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Toy collision
   * [x] Toy sprite
   * [x] Toy Instantiation
+  * [x] Scale toy
+  * [ ] Adjust y position at spawn
   * [ ] Toy movement
 
 * [ ] Have sendable toys
