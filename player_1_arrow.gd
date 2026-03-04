@@ -4,6 +4,8 @@ extends AnimatedSprite2D
 
 const movement = 160
 
+signal spawned_toy(position: Vector2)
+
 const player_positions: Array[int] = [
 	75,
 	235,
@@ -33,7 +35,4 @@ func _process(delta: float) -> void:
 	self.position.y = player_positions[lane]
 	
 	if Input.is_action_just_pressed("player_1_spawn"):
-		var toy := toy_scene.instantiate()
-		get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
-		toy.scale = Vector2(10, 10)
-		toy.global_position = Vector2(global_position.x, player_positions[lane] + y_offset)
+		spawned_toy.emit(Vector2(global_position.x, player_positions[lane] + y_offset))

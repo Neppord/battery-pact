@@ -38,10 +38,11 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [ ] Allow player 2 to send toys
   * [x] Spawn toys on enter
-  * [ ] Set the the toys velocity to the players directon
+  * [ ] Set the toys velocity to the players direction
   * [ ] set the sprits heading to the velocity direction
 
 * [ ] Add a toy sending cooldown
+* [x] Use signals
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter

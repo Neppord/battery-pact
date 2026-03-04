@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cerim4e5hd3is"]
 
+[ext_resource type="Script" uid="uid://wc3a1wyimr43" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dwmcgh7tyf2op" path="res://aseprite/neon-background.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://b0caa22bwxobf" path="res://aseprite/neon-player.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://w5bwj4rlpixb" path="res://player_1_arrow.gd" id="3_h2yge"]
@@ -79,6 +80,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=522391310]
+script = ExtResource("1_7mycd")
 
 [node name="NeonBackground" type="Sprite2D" parent="." unique_id=217928734]
 position = Vector2(959.9999, 540)
@@ -96,9 +98,11 @@ script = ExtResource("3_h2yge")
 toy_scene = ExtResource("4_lquwl")
 
 [node name="Player2Arrow" type="AnimatedSprite2D" parent="." unique_id=138238865]
-position = Vector2(1822, 235.00002)
+position = Vector2(1822, 237.00002)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_efxa6")
 autoplay = "default"
 script = ExtResource("4_1bvp3")
 toy_scene = ExtResource("4_lquwl")
+
+[connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
