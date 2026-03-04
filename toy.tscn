@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c1xwjjii6xoxd"]
 
+[ext_resource type="Script" uid="uid://yp5n1lswdn0y" path="res://toy.gd" id="1_4kfnp"]
 [ext_resource type="Texture2D" uid="uid://c1uq6oijxfhwg" path="res://aseprite/neon-toy-car.png" id="1_tvsie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
 size = Vector2(14, 8)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=84683247]
+script = ExtResource("1_4kfnp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173025041]
 position = Vector2(0, -4)

@@ -33,7 +33,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Toy Instantiation
   * [x] Scale toy
   * [x] Adjust y position at spawn
-  * [ ] Toy movement
+  * [x] Toy movement
   * [ ] Refactor
 
 * [ ] Have sendable toys
