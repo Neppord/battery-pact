@@ -32,8 +32,9 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Toy sprite
   * [x] Toy Instantiation
   * [x] Scale toy
-  * [ ] Adjust y position at spawn
+  * [x] Adjust y position at spawn
   * [ ] Toy movement
+  * [ ] Refactor
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter

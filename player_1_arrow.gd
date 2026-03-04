@@ -13,6 +13,7 @@ const player_positions: Array[int] = [
 ]
 
 var lane: int = 1
+const y_offset: int = 80
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,4 +37,4 @@ func _process(delta: float) -> void:
 		get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
 		toy.global_position = global_position
 		toy.scale = Vector2(10, 10)
-		toy.global_position = Vector2(global_position.x, player_positions[lane])
+		toy.global_position = Vector2(global_position.x, player_positions[lane] + y_offset)
