@@ -8,7 +8,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Show player 1 arrow
   * [x] Decide how many rows we have - 5?
   * [x] Move player 1 arrow up when hitting w
-  * [ ] Move player 1 arrow down when hitting s
+  * [x] Move player 1 arrow down when hitting s
   * [ ] Refactor arrow movement
     * [ ] Find and list all y position of the arrow here
     * [ ] Create a list of all valid y positions

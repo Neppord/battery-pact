@@ -11,3 +11,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("player_1_up"):
 		self.position.y -= movement
 		
+	if Input.is_action_just_pressed("player_1_down"):
+		self.position.y += movement
+		
+		
