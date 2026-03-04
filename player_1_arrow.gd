@@ -24,7 +24,11 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("player_1_down"):
 		lane += 1
-		
-	self.position.y =player_positions[lane]
-		
-		
+	
+	if lane < 0 :
+		lane = 0
+	if 4 < lane:
+		lane = 4
+
+	if 0 <= lane and lane < player_positions.size():
+		self.position.y = player_positions[lane]
