@@ -41,7 +41,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Set the toys velocity to the players direction
   * [x] Set the sprites heading to the velocity direction
 
-* [ ] Add a toy sending cooldown
+* [x] Add a toy sending cooldown
 * [x] Use signals
   * [x] player 1 toy
   * [x] player 2 toy
