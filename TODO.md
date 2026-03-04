@@ -30,7 +30,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Scene file - character2d node
   * [x] Toy collision
   * [x] Toy sprite
-  * [ ] Toy Insantiation
+  * [x] Toy Instantiation
   * [ ] Toy movement
 
 * [ ] Have sendable toys

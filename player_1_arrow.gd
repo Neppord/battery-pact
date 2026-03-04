@@ -1,5 +1,7 @@
 extends AnimatedSprite2D
 
+@export var toy_scene: PackedScene
+
 const movement = 160
 
 const player_positions: Array[int] = [
@@ -28,3 +30,10 @@ func _process(delta: float) -> void:
 	lane = clampi(lane, 0, player_positions.size() - 1)
 
 	self.position.y = player_positions[lane]
+	
+	if Input.is_action_just_pressed("player_1_spawn"):
+		var toy := toy_scene.instantiate()
+		get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
+		toy.global_position = global_position
+		
+		toy.global_position = Vector2(global_position.x, player_positions[lane])

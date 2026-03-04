@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0caa22bwxobf" path="res://aseprite/neon-player.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://w5bwj4rlpixb" path="res://player_1_arrow.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cw2ew5r3edsyf" path="res://player_2_arrow.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c1xwjjii6xoxd" path="res://toy.tscn" id="4_lquwl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -92,6 +93,7 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.45285094
 script = ExtResource("3_h2yge")
+toy_scene = ExtResource("4_lquwl")
 
 [node name="Player2Arrow" type="AnimatedSprite2D" parent="." unique_id=138238865]
 position = Vector2(1822, 235.00002)
