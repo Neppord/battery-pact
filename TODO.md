@@ -34,7 +34,12 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Scale toy
   * [x] Adjust y position at spawn
   * [x] Toy movement
-  * [ ] Refactor
+  * [x] Refactor
+
+* [ ] Allow player 2 to send toys
+  * [ ] Spawn toys on enter
+  * [ ] Set the the toys velocity to the players directon
+  * [ ] set the sprits heading to the velocity direction
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
