@@ -10,7 +10,7 @@ const player_positions: Array[int] = [
 	715,
 ]
 
-const lane: int = 1
+var lane: int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,9 +20,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("player_1_up"):
-		self.position.y -= movement
+		lane -= 1
 		
 	if Input.is_action_just_pressed("player_1_down"):
-		self.position.y += movement
+		lane += 1
+		
+	self.position.y =player_positions[lane]
 		
 		

@@ -18,7 +18,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
       * 715
     * [x] Create a list of all valid y positions
     * [x] Give the arrow an index representing the lane the arrow is in
-    * [ ] Change the index when using w and s 
+    * [x] Change the index when using w and s 
           then use that index and array to set the y position
   * [ ] Stop movement at edges
   * [ ] Show player 2 arrow
