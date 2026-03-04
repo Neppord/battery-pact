@@ -1,12 +1,18 @@
 extends Node2D
 
 const TOY = preload("uid://c1xwjjii6xoxd")
+@onready var player_1_timer: Timer = $Player1Timer
+@onready var player_2_timer: Timer = $Player2Timer
 
 func spawn_left(toy_position: Vector2) -> void:
-	spawn(toy_position, Vector2.RIGHT)
+	if player_1_timer.is_stopped():
+		player_1_timer.start()
+		spawn(toy_position, Vector2.RIGHT)
 	
 func spawn_right(toy_position: Vector2) -> void:
-	spawn(toy_position, Vector2.LEFT)
+	if player_2_timer.is_stopped():
+		player_2_timer.start()
+		spawn(toy_position, Vector2.LEFT)
 	
 func spawn(toy_position: Vector2, direction: Vector2) -> void:
 	var toy := TOY.instantiate()
