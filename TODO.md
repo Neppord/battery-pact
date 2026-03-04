@@ -43,6 +43,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [ ] Add a toy sending cooldown
 * [x] Use signals
+  * [x] player 1 toy
+  * [x] player 2 toy
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
