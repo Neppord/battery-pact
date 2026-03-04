@@ -106,4 +106,4 @@ script = ExtResource("4_1bvp3")
 toy_scene = ExtResource("4_lquwl")
 
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
-[connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_left"]
+[connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]
