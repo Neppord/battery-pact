@@ -1,52 +1,6 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [x] Set correct resolution for project 1920x1080
-* [x] Set background image
-
-* [ ] Have an arrow to be moved up and down
-  * [x] Show player 1 arrow
-  * [x] Decide how many rows we have - 5?
-  * [x] Move player 1 arrow up when hitting w
-  * [x] Move player 1 arrow down when hitting s
-  * [x] Refactor arrow movement
-    * [x] Find and list all y position of the arrow here 
-      * 75
-      * 235
-      * 395
-      * 555
-      * 715
-    * [x] Create a list of all valid y positions
-    * [x] Give the arrow an index representing the lane the arrow is in
-    * [x] Change the index when using w and s 
-          then use that index and array to set the y position
-  * [x] Stop movement at edges
-  * [x] Refactor movement stopping code
-  * [x] Show player 2 arrow
-  * [x] Move player 2 arrow up when hitting w
-  * [x] Move player 2 arrow down when hitting s
-
-* [ ] Create toy scene
-  * [x] Scene file - character2d node
-  * [x] Toy collision
-  * [x] Toy sprite
-  * [x] Toy Instantiation
-  * [x] Scale toy
-  * [x] Adjust y position at spawn
-  * [x] Toy movement
-  * [x] Refactor
-
-* [ ] Allow player 2 to send toys
-  * [x] Spawn toys on enter
-  * [x] Set the toys velocity to the players direction
-  * [x] Set the sprites heading to the velocity direction
-
-* [x] Add a toy sending cooldown
-* [x] Use signals
-  * [x] player 1 toy
-  * [x] player 2 toy
-  * [x] Improvements
-
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
   * [ ] Battery icon showing current charge
