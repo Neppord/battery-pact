@@ -9,7 +9,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Decide how many rows we have - 5?
   * [x] Move player 1 arrow up when hitting w
   * [x] Move player 1 arrow down when hitting s
-  * [ ] Refactor arrow movement
+  * [x] Refactor arrow movement
     * [x] Find and list all y position of the arrow here 
       * 75
       * 235
@@ -20,7 +20,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
     * [x] Give the arrow an index representing the lane the arrow is in
     * [x] Change the index when using w and s 
           then use that index and array to set the y position
-  * [ ] Stop movement at edges
+  * [x] Stop movement at edges
+  * [ ] Refactor movement stopping code
   * [ ] Show player 2 arrow
   * [ ] Move player 2 arrow up when hitting w
   * [ ] Move player 2 arrow down when hitting s

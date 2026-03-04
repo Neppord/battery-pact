@@ -30,5 +30,4 @@ func _process(delta: float) -> void:
 	if 4 < lane:
 		lane = 4
 
-	if 0 <= lane and lane < player_positions.size():
-		self.position.y = player_positions[lane]
+	self.position.y = player_positions[lane]
