@@ -45,6 +45,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Use signals
   * [x] player 1 toy
   * [x] player 2 toy
+  * [ ] Improvements
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
