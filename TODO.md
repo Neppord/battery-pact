@@ -22,9 +22,9 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
           then use that index and array to set the y position
   * [x] Stop movement at edges
   * [x] Refactor movement stopping code
-  * [ ] Show player 2 arrow
-  * [ ] Move player 2 arrow up when hitting w
-  * [ ] Move player 2 arrow down when hitting s
+  * [x] Show player 2 arrow
+  * [x] Move player 2 arrow up when hitting w
+  * [x] Move player 2 arrow down when hitting s
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter

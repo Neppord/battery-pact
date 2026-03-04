@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwmcgh7tyf2op" path="res://aseprite/neon-background.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://b0caa22bwxobf" path="res://aseprite/neon-player.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://w5bwj4rlpixb" path="res://player_1_arrow.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://cw2ew5r3edsyf" path="res://player_2_arrow.gd" id="4_1bvp3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -40,6 +41,42 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("2_0xm2m")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("2_0xm2m")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("2_0xm2m")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
+atlas = ExtResource("2_0xm2m")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efxa6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c57u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=522391310]
 
 [node name="NeonBackground" type="Sprite2D" parent="." unique_id=217928734]
@@ -47,7 +84,7 @@ position = Vector2(959.9999, 540)
 scale = Vector2(10, 10)
 texture = ExtResource("1_ig7tw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27252123]
+[node name="Player1Arrow" type="AnimatedSprite2D" parent="." unique_id=27252123]
 position = Vector2(101, 235.00002)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_272bh")
@@ -55,3 +92,10 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.45285094
 script = ExtResource("3_h2yge")
+
+[node name="Player2Arrow" type="AnimatedSprite2D" parent="." unique_id=138238865]
+position = Vector2(1822, 235.00002)
+scale = Vector2(9, 9)
+sprite_frames = SubResource("SpriteFrames_efxa6")
+autoplay = "default"
+script = ExtResource("4_1bvp3")
