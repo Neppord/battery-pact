@@ -26,6 +26,13 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Move player 2 arrow up when hitting w
   * [x] Move player 2 arrow down when hitting s
 
+* [ ] Create toy scene
+  * [ ] Scene file - character2d node
+  * [ ] Toy collision
+  * [ ] Toy sprite
+  * [ ] Toy Insantiation
+  * [ ] Toy movement
+
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
   * [ ] Battery icon showing current charge
