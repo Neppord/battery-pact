@@ -10,7 +10,12 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Move player 1 arrow up when hitting w
   * [x] Move player 1 arrow down when hitting s
   * [ ] Refactor arrow movement
-    * [ ] Find and list all y position of the arrow here
+    * [x] Find and list all y position of the arrow here 
+      * 75
+      * 235
+      * 395
+      * 555
+      * 715
     * [ ] Create a list of all valid y positions
     * [ ] Give the arrow a index representing the lane the arrow is in
     * [ ] Change the index when using w and s 
