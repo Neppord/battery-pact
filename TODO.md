@@ -1,14 +1,19 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
+* [ ] Play sound when car is spawned
+* [ ] Play sound when toy collides
+* [ ] Give (max) charge to toys when spawned
+  * [ ] Toys lose charge over time
+  * [ ] Toys push the other car proportionally to their charge
+  * [ ] Toys stops when they reach 0 charge
+  * [ ] Toys become gray when they reach 0 charge
+
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
   * [ ] Battery icon showing current charge
     * [ ] Have battery charge itself - 15% to 100% in 3s
   * [ ] Reset battery on send
-  * [ ] Toys slow down on low battery
-  * [ ] Toys stop on emptied battery
-    * [ ] Turn stopped toys gray
 
 * [ ] Count toys that pass the other side
   * [ ] One toy is worth 1 point, first to 10 wins
