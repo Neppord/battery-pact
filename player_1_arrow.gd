@@ -35,6 +35,5 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("player_1_spawn"):
 		var toy := toy_scene.instantiate()
 		get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
-		toy.global_position = global_position
 		toy.scale = Vector2(10, 10)
 		toy.global_position = Vector2(global_position.x, player_positions[lane] + y_offset)
