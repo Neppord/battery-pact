@@ -27,7 +27,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Move player 2 arrow down when hitting s
 
 * [ ] Create toy scene
-  * [ ] Scene file - character2d node
+  * [x] Scene file - character2d node
   * [ ] Toy collision
   * [ ] Toy sprite
   * [ ] Toy Insantiation
