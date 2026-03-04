@@ -101,3 +101,4 @@ scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_efxa6")
 autoplay = "default"
 script = ExtResource("4_1bvp3")
+toy_scene = ExtResource("4_lquwl")
