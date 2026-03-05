@@ -9,7 +9,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [ ] Give (max) charge to toys when spawned
   * [x] Toys lose charge over time
   * [x] Toys stops when they reach 0 charge
-  * [ ] Toys become gray when they reach 0 charge
+  * [x] Toys become gray when they reach 0 charge
   * [ ] Toys push the other car proportionally to their charge
 
 * [ ] Have sendable toys

@@ -21,3 +21,5 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		if get_slide_collision_count() > 0 and !sfx_player.is_playing():
 			sfx_player.play()
+	else:
+		sprite.modulate = Color.DIM_GRAY
