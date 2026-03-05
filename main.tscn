@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cw2ew5r3edsyf" path="res://player_2_arrow.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c1xwjjii6xoxd" path="res://toy.tscn" id="4_lquwl"]
 [ext_resource type="AudioStream" uid="uid://bvccvb6v3k0gu" path="res://music/Neon toy factory.mp3" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://dfb1mdq82gxdy" path="res://sfx/whipx4.wav" id="8_5vw27"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -80,6 +81,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kek77"]
+random_pitch = 1.7127721
+streams_count = 1
+stream_0/stream = ExtResource("8_5vw27")
+
 [node name="Node2D" type="Node2D" unique_id=522391310]
 script = ExtResource("1_7mycd")
 
@@ -116,6 +122,10 @@ one_shot = true
 stream = ExtResource("7_272bh")
 autoplay = true
 bus = &"Music"
+
+[node name="SFX player" type="AudioStreamPlayer2D" parent="." unique_id=1918264982]
+stream = SubResource("AudioStreamRandomizer_kek77")
+bus = &"SFX"
 
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
 [connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]

@@ -3,6 +3,7 @@ extends Node2D
 const TOY = preload("uid://c1xwjjii6xoxd")
 @onready var player_1_timer: Timer = $Player1Timer
 @onready var player_2_timer: Timer = $Player2Timer
+@onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 
 func spawn_left(toy_position: Vector2) -> void:
 	if player_1_timer.is_stopped():
@@ -15,6 +16,7 @@ func spawn_right(toy_position: Vector2) -> void:
 		spawn(toy_position, Vector2.LEFT)
 	
 func spawn(toy_position: Vector2, direction: Vector2) -> void:
+	sfx_player.play()
 	var toy := TOY.instantiate()
 	get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
 	toy.scale = Vector2(10, 10)
