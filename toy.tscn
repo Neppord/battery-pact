@@ -2,9 +2,19 @@
 
 [ext_resource type="Script" uid="uid://yp5n1lswdn0y" path="res://toy.gd" id="1_4kfnp"]
 [ext_resource type="Texture2D" uid="uid://c1uq6oijxfhwg" path="res://aseprite/neon-toy-car.png" id="1_tvsie"]
+[ext_resource type="AudioStream" uid="uid://bnsvlcvh0vi0e" path="res://sfx/shoot.wav" id="3_o3ecr"]
+[ext_resource type="AudioStream" uid="uid://clvpoao5ac7lu" path="res://sfx/hit.wav" id="4_7crt5"]
+[ext_resource type="AudioStream" uid="uid://c55o21di6s17t" path="res://sfx/break.wav" id="5_okrti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
 size = Vector2(14, 8)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdnoh"]
+random_pitch = 1.1362262
+streams_count = 3
+stream_0/stream = ExtResource("3_o3ecr")
+stream_1/stream = ExtResource("4_7crt5")
+stream_2/stream = ExtResource("5_okrti")
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=84683247]
 script = ExtResource("1_4kfnp")
@@ -16,3 +26,6 @@ shape = SubResource("RectangleShape2D_fe3bf")
 [node name="NeonToyCar" type="Sprite2D" parent="." unique_id=831308392]
 position = Vector2(0, -4)
 texture = ExtResource("1_tvsie")
+
+[node name="SFX player" type="AudioStreamPlayer2D" parent="." unique_id=1251227886]
+stream = SubResource("AudioStreamRandomizer_gdnoh")

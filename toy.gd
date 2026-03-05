@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var sprite: Sprite2D = $NeonToyCar
+@onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 
 const SPEED = 300.0
 var direction := Vector2.RIGHT
@@ -12,8 +13,9 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	velocity = direction * SPEED
 	move_and_slide()
+	if(get_slide_collision_count() > 0 and !sfx_player.is_playing()):
+		sfx_player.play()
