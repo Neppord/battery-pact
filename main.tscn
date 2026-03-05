@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://w5bwj4rlpixb" path="res://player_1_arrow.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cw2ew5r3edsyf" path="res://player_2_arrow.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c1xwjjii6xoxd" path="res://toy.tscn" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://bvccvb6v3k0gu" path="res://music/Neon toy factory.mp3" id="7_272bh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -110,6 +111,11 @@ one_shot = true
 
 [node name="Player2Timer" type="Timer" parent="." unique_id=1528791405]
 one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1938171331]
+stream = ExtResource("7_272bh")
+autoplay = true
+bus = &"Music"
 
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
 [connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]

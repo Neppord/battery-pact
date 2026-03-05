@@ -3,7 +3,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [x] Add music bus connected to master
 * [x] Add sfx bus connected to master
-* [ ] Play background music
+* [x] Play background music
 * [ ] Play sound when car is spawned
 * [ ] Play sound when toy collides
 * [ ] Give (max) charge to toys when spawned
