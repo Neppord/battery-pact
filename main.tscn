@@ -112,7 +112,7 @@ one_shot = true
 [node name="Player2Timer" type="Timer" parent="." unique_id=1528791405]
 one_shot = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1938171331]
+[node name="Music player" type="AudioStreamPlayer2D" parent="." unique_id=1938171331]
 stream = ExtResource("7_272bh")
 autoplay = true
 bus = &"Music"
