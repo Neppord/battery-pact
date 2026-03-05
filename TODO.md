@@ -7,10 +7,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Play sound when car is spawned
 * [x] Play sound when toy collides
 * [ ] Give (max) charge to toys when spawned
-  * [ ] Toys lose charge over time
-  * [ ] Toys push the other car proportionally to their charge
-  * [ ] Toys stops when they reach 0 charge
+  * [x] Toys lose charge over time
+  * [x] Toys stops when they reach 0 charge
   * [ ] Toys become gray when they reach 0 charge
+  * [ ] Toys push the other car proportionally to their charge
 
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter

@@ -4,7 +4,9 @@ extends CharacterBody2D
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 
 const SPEED = 300.0
+const CONSUMPTION := 0.03
 var direction := Vector2.RIGHT
+var charge: float = 10.0
 
 func _process(delta: float) -> void:
 	if direction == Vector2.RIGHT: 
@@ -13,9 +15,9 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	charge -= CONSUMPTION
 	velocity = direction * SPEED
-	move_and_slide()
-	if(get_slide_collision_count() > 0 and !sfx_player.is_playing()):
-		sfx_player.play()
+	if charge > 0:
+		move_and_slide()
+		if get_slide_collision_count() > 0 and !sfx_player.is_playing():
+			sfx_player.play()
