@@ -1,12 +1,11 @@
-extends CharacterBody2D
+extends RigidBody2D
 
 @onready var sprite: Sprite2D = $NeonToyCar
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 
 const SPEED = 300.0
-const CONSUMPTION := 0.03
 var direction := Vector2.RIGHT
-var charge: float = 10.0
+var charge: float = 1
 
 func _process(delta: float) -> void:
 	if direction == Vector2.RIGHT: 
@@ -15,11 +14,13 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
-	charge -= CONSUMPTION
-	velocity = direction * SPEED
 	if charge > 0:
-		move_and_slide()
-		if get_slide_collision_count() > 0 and !sfx_player.is_playing():
-			sfx_player.play()
+		charge -= delta/15
+		set_linear_velocity(direction * charge * SPEED)
 	else:
 		sprite.modulate = Color.DIM_GRAY
+
+
+func _on_body_entered(body: Node) -> void:
+	if !sfx_player.is_playing():
+		sfx_player.play() # Replace with function body.
