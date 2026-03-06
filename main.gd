@@ -32,4 +32,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-    pass
+    var progress := 1.0 - (player_1_battery.time_left / player_1_battery.wait_time)
+    $HUD/ChargeBar.value = progress * 100

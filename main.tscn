@@ -148,7 +148,6 @@ offset_bottom = 19.5
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-value = 50.0
 nine_patch_stretch = true
 stretch_margin_left = 1
 stretch_margin_top = 1
