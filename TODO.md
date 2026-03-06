@@ -7,8 +7,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Use timer to set charge of toy
   * [x] Show progress bar
   * [x] Hook it up to timer
-  * [ ] Don't reset timer on timeout
-  * [ ] Style progressbar in the shape of a battery
+  * [x] Don't reset timer on timeout
+  * [ ] Give player 2 the same progress bar
 
 * [ ] Count toys that pass the other side
   * [ ] One toy is worth 1 point, first to 10 wins
