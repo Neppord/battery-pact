@@ -1,19 +1,19 @@
 extends Node2D
 
 const TOY = preload("uid://c1xwjjii6xoxd")
-@onready var player_1_timer: Timer = $Player1Timer
-@onready var player_2_timer: Timer = $Player2Timer
+@onready var player_1_cooldown: Timer = $Player1Timer
+@onready var player_2_cooldown: Timer = $Player2Timer
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 @onready var player_1_battery: Timer = $Player1Arrow/Player1Battery
 
 func spawn_left(toy_position: Vector2) -> void:
-    if player_1_timer.is_stopped():
-        player_1_timer.start()
+    if player_1_cooldown.is_stopped():
+        player_1_cooldown.start()
         spawn(toy_position, Vector2.RIGHT)
     
 func spawn_right(toy_position: Vector2) -> void:
-    if player_2_timer.is_stopped():
-        player_2_timer.start()
+    if player_2_cooldown.is_stopped():
+        player_2_cooldown.start()
         spawn(toy_position, Vector2.LEFT)
     
 func spawn(toy_position: Vector2, direction: Vector2) -> void:
