@@ -1,18 +1,6 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [x] Add music bus connected to master
-* [x] Add sfx bus connected to master
-* [x] Play background music
-* [x] Play sound when car is spawned
-* [x] Play sound when toy collides
-* [x] Rework toy as a rigidbody and improve it
-* [x] Give (max) charge to toys when spawned
-  * [x] Toys lose charge over time
-  * [x] Toys stops when they reach 0 charge
-  * [x] Toys become gray when they reach 0 charge
-  * [x] Toys push the other car proportionally to their charge
-
 * [ ] Have sendable toys
   * [ ] Send a toy with currently charged battery with space/enter
   * [ ] Battery icon showing current charge
