@@ -240,6 +240,36 @@ shape = SubResource("WorldBoundaryShape2D_kek77")
 position = Vector2(979, 811)
 shape = SubResource("WorldBoundaryShape2D_4c57u")
 
+[node name="VictoryText" type="Panel" parent="." unique_id=476029277]
+visible = false
+offset_left = 488.0
+offset_top = 170.0
+offset_right = 1530.0
+offset_bottom = 646.0
+
+[node name="Label" type="Label" parent="VictoryText" unique_id=1282917565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.6745098, 1)
+theme_override_constants/outline_size = 71
+theme_override_constants/shadow_outline_size = 131
+theme_override_font_sizes/font_size = 135
+text = "The winner is
+Player"
+horizontal_alignment = 1
+
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
 [connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]
 [connection signal="body_entered" from="Player1Goal" to="." method="player_2_scores"]
