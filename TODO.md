@@ -2,9 +2,9 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
 * [ ] Send a toy with currently charged battery with space/enter
-  * [ ] Add timer for current battery charge
-  * [ ] Reset timer on send
-  * [ ] Use timer to set charge of toy
+  * [x] Add timer for current battery charge
+  * [x] Reset timer on send
+  * [x] Use timer to set charge of toy
   * [ ] Show progress bar for timer
   * [ ] Style progressbar in the shape of a battery
 
