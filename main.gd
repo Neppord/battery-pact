@@ -4,6 +4,7 @@ const TOY = preload("uid://c1xwjjii6xoxd")
 @onready var player_1_timer: Timer = $Player1Timer
 @onready var player_2_timer: Timer = $Player2Timer
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
+@onready var player_1_battery: Timer = $Player1Arrow/Player1Battery
 
 func spawn_left(toy_position: Vector2) -> void:
     if player_1_timer.is_stopped():

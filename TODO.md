@@ -1,11 +1,12 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [ ] Have sendable toys
-  * [ ] Send a toy with currently charged battery with space/enter
-  * [ ] Battery icon showing current charge
-    * [ ] Have battery charge itself - 15% to 100% in 3s
-  * [ ] Reset battery on send
+* [ ] Send a toy with currently charged battery with space/enter
+  * [ ] Add timer for current battery charge
+  * [ ] Reset timer on send
+  * [ ] Use timer to set charge of toy
+  * [ ] Show progress bar for timer
+  * [ ] Style progressbar in the shape of a battery
 
 * [ ] Count toys that pass the other side
   * [ ] One toy is worth 1 point, first to 10 wins
