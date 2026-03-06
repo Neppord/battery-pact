@@ -1,7 +1,7 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [ ] Send a toy with currently charged battery with space/enter
+* [x] Send a toy with currently charged battery with space/enter
   * [x] Add timer for current battery charge
   * [x] Reset timer on send
   * [x] Use timer to set charge of toy
@@ -16,27 +16,14 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Add player score and connect to signals on goal line
   * [x] Display player scores
   * [x] Remove toys that score from node tree
-  * [ ] Display finish screen when a player wins
+  * [x] Display finish screen when a player wins
   * [ ] Add a fanfare sound
 
-# Visuals
-* [ ] Background
-* [ ] Toys
-  * [ ] Stopped state
-* [ ] Arrow
-* [ ] Battery icon
-* [ ] Score
-* [ ] Charge bar on battery
-
 # Audio
-* [ ] Send sound
 * [ ] Travel sound
-* [ ] Collision sound
 * [ ] Battery max charge sound
 * [ ] Stop sound
 * [ ] Arrow collision (up/down) sound
-* [ ] Background music
-* [ ] Victory fanfare
 * [ ] Get a point sound
 
 ## Later stuff!
