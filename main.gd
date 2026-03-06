@@ -11,12 +11,14 @@ var player_1_score: int = 0
 var player_2_score: int = 0
 
 func player_1_scores(body: Node2D) -> void:
-    player_1_score += 1
-    $HUD/Player1Score.text = str(player_1_score)
+    if body.is_in_group("toy"):
+        player_1_score += 1
+        $HUD/Player1Score.text = str(player_1_score)
 
 func player_2_scores(body: Node2D) -> void:
-    player_2_score += 1
-    $HUD/Player2Score.text = str(player_2_score)
+    if body.is_in_group("toy"):
+        player_2_score += 1
+        $HUD/Player2Score.text = str(player_2_score)
 
 func timer_progress(timer: Timer) -> float:
     return 1.0 - (timer.time_left / timer.wait_time)

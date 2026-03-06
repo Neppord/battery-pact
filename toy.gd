@@ -7,6 +7,9 @@ const SPEED := 300.0
 var direction := Vector2.RIGHT
 var charge: float = 1.
 
+func _ready() -> void:
+    add_to_group("toy")
+
 func _process(delta: float) -> void:
     if direction == Vector2.RIGHT: 
         sprite.flip_h = false
