@@ -6,7 +6,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Reset timer on send
   * [x] Use timer to set charge of toy
   * [x] Show progress bar
-  * [ ] Hook it up to timer
+  * [x] Hook it up to timer
+  * [ ] Don't reset timer on timeout
   * [ ] Style progressbar in the shape of a battery
 
 * [ ] Count toys that pass the other side
