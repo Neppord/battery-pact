@@ -5,7 +5,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Add timer for current battery charge
   * [x] Reset timer on send
   * [x] Use timer to set charge of toy
-  * [ ] Show progress bar for timer
+  * [x] Show progress bar
+  * [ ] Hook it up to timer
   * [ ] Style progressbar in the shape of a battery
 
 * [ ] Count toys that pass the other side

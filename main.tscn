@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c1xwjjii6xoxd" path="res://toy.tscn" id="4_lquwl"]
 [ext_resource type="AudioStream" uid="uid://bvccvb6v3k0gu" path="res://music/Neon toy factory.mp3" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://dfb1mdq82gxdy" path="res://sfx/whipx4.wav" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://n8d8etkrdpdu" path="res://aseprite/battery.png" id="9_kek77"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -130,6 +131,32 @@ bus = &"Music"
 [node name="SFX player" type="AudioStreamPlayer2D" parent="." unique_id=1918264982]
 stream = SubResource("AudioStreamRandomizer_kek77")
 bus = &"SFX"
+
+[node name="HUD" type="Panel" parent="." unique_id=1687817620]
+offset_top = 812.0
+offset_right = 1920.0
+offset_bottom = 1082.0
+
+[node name="ChargeBar" type="TextureProgressBar" parent="HUD" unique_id=2137000719]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -0.5
+offset_right = 256.0
+offset_bottom = 19.5
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+texture_under = ExtResource("9_kek77")
+texture_progress = ExtResource("9_kek77")
+tint_under = Color(0.18174565, 0.18174565, 0.18174565, 1)
 
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
 [connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]
