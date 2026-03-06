@@ -107,6 +107,7 @@ toy_scene = ExtResource("4_lquwl")
 
 [node name="Player1Battery" type="Timer" parent="Player1Arrow" unique_id=1689579528]
 wait_time = 5.0
+one_shot = true
 autostart = true
 
 [node name="Player2Arrow" type="AnimatedSprite2D" parent="." unique_id=138238865]
