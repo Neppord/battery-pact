@@ -15,6 +15,10 @@ run/main_scene="uid://cerim4e5hd3is"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://be0eauhd55xdq"
+
 [display]
 
 window/size/viewport_width=1920
@@ -62,3 +66,4 @@ player_2_spawn={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
