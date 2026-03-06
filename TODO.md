@@ -14,7 +14,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Create goal lines, area2d
   * [x] Add walls to prevent toy from flying past goal line
   * [x] Add player score and connect to signals on goal line
-  * [ ] Display player scores
+  * [x] Display player scores
   * [ ] Remove toys that score from node tree
   * [ ] Display finish screen when a player wins
   * [ ] Add a fanfare sound
