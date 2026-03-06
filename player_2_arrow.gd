@@ -7,11 +7,11 @@ const movement = 160
 signal spawned_toy(position: Vector2)
 
 const player_positions: Array[int] = [
-	75,
-	235,
-	395,
-	555,
-	715,
+    75,
+    235,
+    395,
+    555,
+    715,
 ]
 
 var lane: int = 1
@@ -19,20 +19,20 @@ const y_offset: int = 80
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+    pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("player_2_up"):
-		lane -= 1
-		
-	if Input.is_action_just_pressed("player_2_down"):
-		lane += 1
-	
-	lane = clampi(lane, 0, player_positions.size() - 1)
+    if Input.is_action_just_pressed("player_2_up"):
+        lane -= 1
+        
+    if Input.is_action_just_pressed("player_2_down"):
+        lane += 1
+    
+    lane = clampi(lane, 0, player_positions.size() - 1)
 
-	self.position.y = player_positions[lane]
-	
-	if Input.is_action_just_pressed("player_2_spawn"):
-		spawned_toy.emit(Vector2(global_position.x, player_positions[lane] + y_offset))
+    self.position.y = player_positions[lane]
+    
+    if Input.is_action_just_pressed("player_2_spawn"):
+        spawned_toy.emit(Vector2(global_position.x, player_positions[lane] + y_offset))

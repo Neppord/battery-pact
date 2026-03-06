@@ -3,24 +3,24 @@ extends RigidBody2D
 @onready var sprite: Sprite2D = $NeonToyCar
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 
-const SPEED = 300.0
+const SPEED := 300.0
 var direction := Vector2.RIGHT
-var charge: float = 1
+var charge: float = 1.
 
 func _process(delta: float) -> void:
-	if direction == Vector2.RIGHT: 
-		sprite.flip_h = false
-	else: 
-		sprite.flip_h = true
+    if direction == Vector2.RIGHT: 
+        sprite.flip_h = false
+    else: 
+        sprite.flip_h = true
 
 func _physics_process(delta: float) -> void:
-	if charge > 0:
-		charge -= delta/15
-		set_linear_velocity(direction * charge * SPEED)
-	else:
-		sprite.modulate = Color.DIM_GRAY
+    if charge > 0:
+        charge -= delta/15
+        set_linear_velocity(direction * charge * SPEED)
+    else:
+        sprite.modulate = Color.DIM_GRAY
 
 
 func _on_body_entered(body: Node) -> void:
-	if !sfx_player.is_playing():
-		sfx_player.play() # Replace with function body.
+    if !sfx_player.is_playing():
+        sfx_player.play() # Replace with function body.
