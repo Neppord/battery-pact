@@ -8,10 +8,16 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Show progress bar
   * [x] Hook it up to timer
   * [x] Don't reset timer on timeout
-  * [ ] Give player 2 the same progress bar
+  * [x] Give player 2 the same progress bar
 
 * [ ] Count toys that pass the other side
-  * [ ] One toy is worth 1 point, first to 10 wins
+  * [ ] Create goal lines, area2d
+  * [ ] Add player score and connect to signals on goal line
+  * [ ] Add walls to prevent toy from flying past goal line
+  * [ ] Remove toys that score from node tree
+  * [ ] Display player scores
+  * [ ] Display finish screen when a player wins
+  * [ ] Add a fanfare sound
 
 # Visuals
 * [ ] Background
