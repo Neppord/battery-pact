@@ -217,13 +217,13 @@ text = "0"
 [node name="Player1Goal" type="Area2D" parent="." unique_id=951927263]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Goal" unique_id=1260625773]
-position = Vector2(-504, 534.5)
+position = Vector2(-601, 534.5)
 shape = SubResource("RectangleShape2D_kek77")
 
 [node name="Player2Goal" type="Area2D" parent="." unique_id=1655524710]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Goal" unique_id=1608156550]
-position = Vector2(2424, 534.5)
+position = Vector2(2518, 534.5)
 shape = SubResource("RectangleShape2D_kek77")
 
 [node name="TopWall" type="StaticBody2D" parent="." unique_id=901816505]

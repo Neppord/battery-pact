@@ -15,7 +15,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Add walls to prevent toy from flying past goal line
   * [x] Add player score and connect to signals on goal line
   * [x] Display player scores
-  * [ ] Remove toys that score from node tree
+  * [x] Remove toys that score from node tree
   * [ ] Display finish screen when a player wins
   * [ ] Add a fanfare sound
 
