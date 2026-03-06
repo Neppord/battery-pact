@@ -158,5 +158,34 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
+[node name="ChargeBar2" type="TextureProgressBar" parent="HUD" unique_id=1819884645]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+texture_under = ExtResource("9_kek77")
+texture_progress = ExtResource("9_kek77")
+tint_under = Color(0.18174565, 0.18174565, 0.18174565, 1)
+
+[node name="Timer" type="Timer" parent="HUD/ChargeBar2" unique_id=730541971]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]
 [connection signal="spawned_toy" from="Player2Arrow" to="." method="spawn_right"]
