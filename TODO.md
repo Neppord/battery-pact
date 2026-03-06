@@ -12,10 +12,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [ ] Count toys that pass the other side
   * [x] Create goal lines, area2d
-  * [ ] Add walls to prevent toy from flying past goal line
-  * [ ] Remove toys that score from node tree
-  * [ ] Add player score and connect to signals on goal line
+  * [x] Add walls to prevent toy from flying past goal line
+  * [x] Add player score and connect to signals on goal line
   * [ ] Display player scores
+  * [ ] Remove toys that score from node tree
   * [ ] Display finish screen when a player wins
   * [ ] Add a fanfare sound
 
