@@ -6,9 +6,12 @@ const TOY = preload("uid://c1xwjjii6xoxd")
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
 @onready var player_1_battery: Timer = $HUD/ChargeBar1/Timer
 
+func timer_progress(timer: Timer) -> float:
+    return 1.0 - (timer.time_left / timer.wait_time)
+
 func spawn_left(toy_position: Vector2) -> void:
     if player_1_cooldown.is_stopped():
-        var progress := 1.0 - (player_1_battery.time_left / player_1_battery.wait_time)
+        var progress := timer_progress(player_1_battery)
         player_1_battery.start()
         player_1_cooldown.start()
         spawn(toy_position, Vector2.RIGHT, progress)
@@ -32,5 +35,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-    var progress := 1.0 - (player_1_battery.time_left / player_1_battery.wait_time)
+    var progress := timer_progress(player_1_battery)
     $HUD/ChargeBar1.value = progress * 100
