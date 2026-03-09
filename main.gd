@@ -2,6 +2,9 @@ extends Node2D
 
 const TOY = preload("res://toy.tscn")
 const TOY2 = preload("res://toy2.tscn")
+const toys: Array[PackedScene] = [TOY, TOY2]
+var player_1_toy_index = 0
+var player_2_toy_index = 0
 @onready var player_1_cooldown: Timer = $Player1Timer
 @onready var player_2_cooldown: Timer = $Player2Timer
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
@@ -38,14 +41,16 @@ func spawn_left(toy_position: Vector2) -> void:
         var progress := timer_progress(player_1_battery)
         player_1_battery.start()
         player_1_cooldown.start()
-        spawn(TOY2, toy_position,Vector2(1, 1), progress)
+        var toy_scene = toys[player_1_toy_index]
+        spawn(toy_scene, toy_position,Vector2(1, 1), progress)
     
 func spawn_right(toy_position: Vector2) -> void:
     if player_2_cooldown.is_stopped():
         var progress := timer_progress(player_2_battery)
         player_2_battery.start()
         player_2_cooldown.start()
-        spawn(TOY, toy_position, Vector2(-1, 1), progress)
+        var toy_scene = toys[player_2_toy_index]
+        spawn(toy_scene, toy_position, Vector2(-1, 1), progress)
     
 func spawn(toy_scene: PackedScene,toy_position: Vector2, direction: Vector2, charge:float) -> void:
     sfx_player.play()
@@ -64,3 +69,9 @@ func _process(delta: float) -> void:
     $HUD/ChargeBar1.value = progress1 * 100
     var progress2 := timer_progress(player_2_battery)
     $HUD/ChargeBar2.value = progress2 * 100
+    
+    if Input.is_action_just_pressed("player_1_left"):
+        player_1_toy_index = clampi(player_1_toy_index - 1, 0, toys.size() - 1)
+            
+    if Input.is_action_just_pressed("player_1_right"):
+        player_1_toy_index = clampi(player_1_toy_index + 1, 0, toys.size() - 1)

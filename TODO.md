@@ -10,9 +10,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Remove crash sound from hitting wall
 
 * [ ] Allow players to pick among all toys
-  * [ ] Put all toys in a list
-  * [ ] Give each player an index in the list for "their" toy
-  * [ ] Allow players to switch toy index using their "left/right" keys
+  * [x] Put all toys in a list
+  * [x] Give each player an index in the list for "their" toy
+  * [x] Allow players to switch toy index using their "left/right" keys
+    * [-] Allow wrapping over when selecting toys
   * [ ] Reset timer when the player changes toy (?)
 
 ## Audio
