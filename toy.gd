@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
     else:
         sprite.modulate = Color.DIM_GRAY
 
-
 func _on_body_entered(body: Node) -> void:
-    if !sfx_player.is_playing():
-        sfx_player.play() # Replace with function body.
+    if body.is_in_group("toy"):
+        if !sfx_player.is_playing():
+            sfx_player.play() # Replace with function body.

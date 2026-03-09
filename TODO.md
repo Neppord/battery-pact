@@ -7,7 +7,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Change direction when hitting a wall
   * [x] Make sure charge is enough for diagonal cars too
 
-* [ ] Remove crash sound from hitting wall
+* [x] Remove crash sound from hitting wall
 
 * [ ] Allow players to pick among all toys
   * [ ] Put all toys in a list
