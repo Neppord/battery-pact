@@ -38,21 +38,21 @@ func spawn_left(toy_position: Vector2) -> void:
         var progress := timer_progress(player_1_battery)
         player_1_battery.start()
         player_1_cooldown.start()
-        spawn(TOY2, toy_position,Vector2.RIGHT, progress)
+        spawn(TOY2, toy_position,Vector2(1, 1), progress)
     
 func spawn_right(toy_position: Vector2) -> void:
     if player_2_cooldown.is_stopped():
         var progress := timer_progress(player_2_battery)
         player_2_battery.start()
         player_2_cooldown.start()
-        spawn(TOY, toy_position, Vector2.LEFT, progress)
+        spawn(TOY, toy_position, Vector2(-1, 1), progress)
     
 func spawn(toy_scene: PackedScene,toy_position: Vector2, direction: Vector2, charge:float) -> void:
     sfx_player.play()
     var toy := toy_scene.instantiate()
     get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
     toy.global_position = toy_position
-    toy.direction = direction
+    toy.direction *= direction
     toy.charge = charge
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

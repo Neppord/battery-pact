@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2r6i470ier6y"]
 
-[ext_resource type="Script" uid="uid://yp5n1lswdn0y" path="res://toy.gd" id="1_gjsum"]
+[ext_resource type="Script" uid="uid://b2edfmdarwhwm" path="res://toy2.gd" id="1_gjsum"]
 [ext_resource type="Texture2D" uid="uid://crjbsgcukerwm" path="res://aseprite/neon-toy-yellow.png" id="2_gjsum"]
 [ext_resource type="AudioStream" uid="uid://bnsvlcvh0vi0e" path="res://sfx/shoot.wav" id="3_vwahc"]
 [ext_resource type="AudioStream" uid="uid://clvpoao5ac7lu" path="res://sfx/hit.wav" id="4_jybtt"]
@@ -17,7 +17,6 @@ stream_1/stream = ExtResource("4_jybtt")
 stream_2/stream = ExtResource("5_o31l6")
 
 [node name="Toy2" type="RigidBody2D" unique_id=1072743980]
-position = Vector2(-5, 0)
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 16

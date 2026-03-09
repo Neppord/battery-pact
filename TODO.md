@@ -2,8 +2,8 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
 * [ ] Second toy (change player 1 toy to this)
-  * [ ] Color Yellow
-  * [ ] Moves diagonally
+  * [x] Color Yellow
+  * [x] Moves diagonally
   * [ ] Change direction when hitting a wall
 
 * [ ] Allow players to pick among all toys
