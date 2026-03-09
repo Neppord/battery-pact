@@ -15,7 +15,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [x] Allow player 1 to switch toy index using their "left/right" keys
     * [x] Allow wrapping over when selecting toys
   * [x] Invite player 2 to do the same
-  * [ ] Reset timer when the player changes toy (?)
+  * [ ] Show a sprite indicating currently sending toy
 
 ## Audio
 * [ ] Travel sound
