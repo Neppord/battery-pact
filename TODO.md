@@ -1,23 +1,16 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [x] Send a toy with currently charged battery with space/enter
-  * [x] Add timer for current battery charge
-  * [x] Reset timer on send
-  * [x] Use timer to set charge of toy
-  * [x] Show progress bar
-  * [x] Hook it up to timer
-  * [x] Don't reset timer on timeout
-  * [x] Give player 2 the same progress bar
+* [ ] Second toy (change player 1 toy to this)
+  * [ ] Color Yellow
+  * [ ] Moves diagonally
+  * [ ] Change direction when hitting a wall
 
-* [ ] Count toys that pass the other side
-  * [x] Create goal lines, area2d
-  * [x] Add walls to prevent toy from flying past goal line
-  * [x] Add player score and connect to signals on goal line
-  * [x] Display player scores
-  * [x] Remove toys that score from node tree
-  * [x] Display finish screen when a player wins
-  * [ ] Add a fanfare sound
+* [ ] Allow players to pick among all toys
+  * [ ] Put all toys in a list
+  * [ ] Give each player an index in the list for "their" toy
+  * [ ] Allow players to switch toy index using their "left/right" keys
+  * [ ] Reset timer when the player changes toy (?)
 
 # Audio
 * [ ] Travel sound
@@ -28,28 +21,71 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 ## Later stuff!
 
-* [ ] Colliding toys push each other
-    * [ ] More charged toy wins
-        * [ ] Bigger minus smaller charge for total movement?
+* [ ] Recolour cars
+  * [ ] Red
+  * [ ] Yellow
+
+* [ ] New movement patterns
+  * [ ] Diagonal
+  * [ ] Teleport
+  * [ ] Random
+  * [ ] Evade
+  * [ ] Lane-skip at intervals
+
+* [ ] Make it more fun to win
+    * [ ] Add a fanfare sound
+
+* [ ] Take all parameters/effects and design toys
+  * [ ] Standard toys
+    * [ ] Reliable, common
+  * [ ] Special toys
+    * [ ] Chaotic, fun
+
+* Toy strength
+  * [ ] Weak+fast
+  * [ ] Strong+slow
+  * [ ] Mid+mid
+
+* Toy wind-up cost
+  * [ ] Low     - Reserved for non-complicated toys
+  * [ ] Medium  - Reserved for most toys
+  * [ ] High    - Reserved for powerful toys
 
 * [ ] Collided toys perform their activation
   * [ ] Different for each toy - defining trait
+    * [ ] New collision effects
+      * [ ] Charge a single toy to full and discharge self
+      * [ ] Charges everything in an area around itself on collision
+      * [ ] Teleports backwards
+      * [ ] Pushes target
 
-* [ ] Different toys move differently
-```
-move and slide
-	if charge <= 0:
-		sprite.modulate = Color.DIM_GRAY
-	
-	if charge > 0 and not collided:
-		charge -= CONSUMPTION
-		velocity = direction * SPEED * charge / 10.0
-		if get_slide_collision_count() > 0 and !sfx_player.is_playing():
-			sfx_player.play()
-			collided = true
-			for i in get_slide_collision_count():
-				var collision = get_slide_collision(i)
-				collider = collision.get_collider()
-				velocity = collider.velocity
-	elif collided: 
-		move_and_slide()
+* [ ] Toy projectiles
+  * [ ] Reduce target's charge
+  * [ ] Moves target randomly on the y-axis
+  * [ ] Moves target to adjacent lane
+  * [ ] Rotates target
+
+* [ ] Toy path drops
+  * [ ] Charge pack
+  * [ ] Push-bomb
+  * [ ] Teleport pack
+  * [ ] Push-arrow, direction
+
+* [ ] Randomly spawned power-ups
+  * [ ] Player battery charger - instant
+  * [ ] Player battery charger - Over time
+  * [ ] Battery has max charge for 5s
+  * [ ] Doubles toy speed
+  * [ ] Gives all your toys full charge
+  * [ ] Gives all toys full charge
+
+* [ ] Adjust cooldown timer
+  * [ ] 0.1s instead
+
+## juicy stuff!
+
+* [ ] Screen shake
+* [ ] particles
+* [ ] "invis frames"
+* [ ] stretching
+* [ ] other forms of tweening
