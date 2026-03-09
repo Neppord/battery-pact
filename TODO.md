@@ -4,7 +4,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [ ] Second toy (change player 1 toy to this)
   * [x] Color Yellow
   * [x] Moves diagonally
-  * [ ] Change direction when hitting a wall
+  * [x] Change direction when hitting a wall
+  * [ ] Make sure charge is enough for diagonal cars too
+
+* [ ] Remove crash sound from hitting wall
 
 * [ ] Allow players to pick among all toys
   * [ ] Put all toys in a list
@@ -12,14 +15,14 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
   * [ ] Allow players to switch toy index using their "left/right" keys
   * [ ] Reset timer when the player changes toy (?)
 
-# Audio
+## Audio
 * [ ] Travel sound
 * [ ] Battery max charge sound
 * [ ] Stop sound
 * [ ] Arrow collision (up/down) sound
 * [ ] Get a point sound
 
-## Later stuff!
+## Needs refining
 
 * [ ] Recolour cars
   * [ ] Red

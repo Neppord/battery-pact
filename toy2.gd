@@ -25,5 +25,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node) -> void:
+    if body.is_in_group("wall"):
+        direction *= Vector2(1,-1)
     if !sfx_player.is_playing():
         sfx_player.play() # Replace with function body.
