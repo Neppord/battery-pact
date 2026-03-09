@@ -71,7 +71,7 @@ func _process(delta: float) -> void:
     $HUD/ChargeBar2.value = progress2 * 100
     
     if Input.is_action_just_pressed("player_1_left"):
-        player_1_toy_index = clampi(player_1_toy_index - 1, 0, toys.size() - 1)
+        player_1_toy_index = (player_1_toy_index - 1) % toys.size()
             
     if Input.is_action_just_pressed("player_1_right"):
-        player_1_toy_index = clampi(player_1_toy_index + 1, 0, toys.size() - 1)
+        player_1_toy_index = (player_1_toy_index + 1) % toys.size()
