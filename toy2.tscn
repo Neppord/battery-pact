@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c2r6i470ier6y"]
+
+[ext_resource type="Script" uid="uid://yp5n1lswdn0y" path="res://toy.gd" id="1_gjsum"]
+[ext_resource type="Texture2D" uid="uid://crjbsgcukerwm" path="res://aseprite/neon-toy-yellow.png" id="2_gjsum"]
+[ext_resource type="AudioStream" uid="uid://bnsvlcvh0vi0e" path="res://sfx/shoot.wav" id="3_vwahc"]
+[ext_resource type="AudioStream" uid="uid://clvpoao5ac7lu" path="res://sfx/hit.wav" id="4_jybtt"]
+[ext_resource type="AudioStream" uid="uid://c55o21di6s17t" path="res://sfx/break.wav" id="5_o31l6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
+size = Vector2(139, 69)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdnoh"]
+random_pitch = 1.1362262
+streams_count = 3
+stream_0/stream = ExtResource("3_vwahc")
+stream_1/stream = ExtResource("4_jybtt")
+stream_2/stream = ExtResource("5_o31l6")
+
+[node name="Toy2" type="RigidBody2D" unique_id=1072743980]
+position = Vector2(-5, 0)
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 16
+script = ExtResource("1_gjsum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173025041]
+position = Vector2(5.5, -34.5)
+shape = SubResource("RectangleShape2D_fe3bf")
+
+[node name="NeonToyCar" type="Sprite2D" parent="." unique_id=831308392]
+position = Vector2(4.9999995, -38.999996)
+scale = Vector2(10, 10)
+texture = ExtResource("2_gjsum")
+
+[node name="SFX player" type="AudioStreamPlayer2D" parent="." unique_id=1251227886]
+stream = SubResource("AudioStreamRandomizer_gdnoh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

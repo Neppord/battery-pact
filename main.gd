@@ -1,6 +1,7 @@
 extends Node2D
 
-const TOY = preload("uid://c1xwjjii6xoxd")
+const TOY = preload("res://toy.tscn")
+const TOY2 = preload("res://toy2.tscn")
 @onready var player_1_cooldown: Timer = $Player1Timer
 @onready var player_2_cooldown: Timer = $Player2Timer
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
@@ -9,7 +10,7 @@ const TOY = preload("uid://c1xwjjii6xoxd")
 
 var player_1_score: int = 0
 var player_2_score: int = 0
-
+ 
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
         player_1_score += 1
@@ -37,18 +38,18 @@ func spawn_left(toy_position: Vector2) -> void:
         var progress := timer_progress(player_1_battery)
         player_1_battery.start()
         player_1_cooldown.start()
-        spawn(toy_position, Vector2.RIGHT, progress)
+        spawn(TOY2, toy_position,Vector2.RIGHT, progress)
     
 func spawn_right(toy_position: Vector2) -> void:
     if player_2_cooldown.is_stopped():
         var progress := timer_progress(player_2_battery)
         player_2_battery.start()
         player_2_cooldown.start()
-        spawn(toy_position, Vector2.LEFT, progress)
+        spawn(TOY, toy_position, Vector2.LEFT, progress)
     
-func spawn(toy_position: Vector2, direction: Vector2, charge:float) -> void:
+func spawn(toy_scene: PackedScene,toy_position: Vector2, direction: Vector2, charge:float) -> void:
     sfx_player.play()
-    var toy := TOY.instantiate()
+    var toy := toy_scene.instantiate()
     get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
     toy.global_position = toy_position
     toy.direction = direction
