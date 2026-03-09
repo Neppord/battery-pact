@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
     if charge > 0:
-        charge -= delta/15
+        charge -= delta/15/3
         set_linear_velocity(direction * charge * SPEED)
     else:
         sprite.modulate = Color.DIM_GRAY

@@ -1,11 +1,11 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [ ] Second toy (change player 1 toy to this)
+* [x] Second toy (change player 1 toy to this)
   * [x] Color Yellow
   * [x] Moves diagonally
   * [x] Change direction when hitting a wall
-  * [ ] Make sure charge is enough for diagonal cars too
+  * [x] Make sure charge is enough for diagonal cars too
 
 * [ ] Remove crash sound from hitting wall
 
