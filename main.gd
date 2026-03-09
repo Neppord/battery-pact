@@ -43,6 +43,7 @@ func spawn_left(toy_position: Vector2) -> void:
         player_1_cooldown.start()
         var toy_scene = toys[player_1_toy_index]
         spawn(toy_scene, toy_position,Vector2(1, 1), progress)
+        
     
 func spawn_right(toy_position: Vector2) -> void:
     if player_2_cooldown.is_stopped():
@@ -75,3 +76,9 @@ func _process(delta: float) -> void:
             
     if Input.is_action_just_pressed("player_1_right"):
         player_1_toy_index = (player_1_toy_index + 1) % toys.size()
+        
+    if Input.is_action_just_pressed("player_2_left"):
+        player_2_toy_index = (player_2_toy_index - 1) % toys.size()
+                
+    if Input.is_action_just_pressed("player_2_right"):
+        player_2_toy_index = (player_2_toy_index + 1) % toys.size()
