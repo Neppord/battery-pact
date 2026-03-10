@@ -214,6 +214,44 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 72
 text = "0"
 
+[node name="Player1ToyIndicator" type="Label" parent="HUD" unique_id=910467485]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -373.0
+offset_right = 868.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.6745098, 1)
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 30
+theme_override_font_sizes/font_size = 72
+text = "1"
+vertical_alignment = 2
+
+[node name="Player2ToyIndicator" type="Label" parent="HUD" unique_id=2138516603]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -868.0
+offset_top = -373.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.6745098, 1)
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 30
+theme_override_font_sizes/font_size = 72
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="Player1Goal" type="Area2D" parent="." unique_id=951927263]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Goal" unique_id=1260625773]

@@ -82,3 +82,6 @@ func _process(delta: float) -> void:
                 
     if Input.is_action_just_pressed("player_2_right"):
         player_2_toy_index = (player_2_toy_index + 1) % toys.size()
+    
+    $HUD/Player1ToyIndicator.text = str(abs(player_1_toy_index) + 1)
+    $HUD/Player2ToyIndicator.text = str(abs(player_2_toy_index) + 1)
