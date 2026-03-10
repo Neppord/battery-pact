@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dy4g3v80lrqte"
+path="res://.godot/imported/SendToy 1.wav-d8993a7c88fa32fa7bfdc73e37be0d47.sample"
+
+[deps]
+
+source_file="res://sfx/SendToy 1.wav"
+dest_files=["res://.godot/imported/SendToy 1.wav-d8993a7c88fa32fa7bfdc73e37be0d47.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
