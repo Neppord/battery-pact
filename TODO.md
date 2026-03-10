@@ -5,7 +5,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Arrow collision (up/down) sound
 * [x] Send sound
 * [x] Battery max charge sound
-* [ ] Stop sound
+* [x] Stop sound
 * [ ] Get a point sound
 * [ ] Victory fanfare
 

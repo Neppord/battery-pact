@@ -15,12 +15,15 @@ func _process(delta: float) -> void:
         sprite.flip_h = false
     else: 
         sprite.flip_h = true
-
+var is_out_of_charge: bool = false
 func _physics_process(delta: float) -> void:
     if charge > 0:
         charge -= delta/15/3
         set_linear_velocity(direction * charge * SPEED)
     else:
+        if not is_out_of_charge:
+            $"../SFX/ToyStop".play()
+        is_out_of_charge = true
         sprite.modulate = Color.DIM_GRAY
 
 
