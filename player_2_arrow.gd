@@ -30,7 +30,10 @@ func _process(delta: float) -> void:
     if Input.is_action_just_pressed("player_2_down"):
         lane += 1
     
+    var tmp_lane: int = lane
     lane = clampi(lane, 0, player_positions.size() - 1)
+    if lane != tmp_lane:
+        $"../SFX/ArrowCollision".play()
 
     self.position.y = player_positions[lane]
     
