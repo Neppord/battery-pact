@@ -6,7 +6,7 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Send sound
 * [x] Battery max charge sound
 * [x] Stop sound
-* [ ] Get a point sound
+* [x] Get a point sound
 * [ ] Victory fanfare
 
 ## Needs refining
