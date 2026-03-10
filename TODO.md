@@ -1,28 +1,13 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [x] Second toy (change player 1 toy to this)
-  * [x] Color Yellow
-  * [x] Moves diagonally
-  * [x] Change direction when hitting a wall
-  * [x] Make sure charge is enough for diagonal cars too
-
-* [x] Remove crash sound from hitting wall
-
-* [ ] Allow players to pick among all toys
-  * [x] Put all toys in a list
-  * [x] Give each player an index in the list for "their" toy
-  * [x] Allow player 1 to switch toy index using their "left/right" keys
-    * [x] Allow wrapping over when selecting toys
-  * [x] Invite player 2 to do the same
-  * [ ] Show a sprite indicating currently sending toy
-
 ## Audio
-* [ ] Travel sound
+* [ ] Toy travel sound
 * [ ] Battery max charge sound
 * [ ] Stop sound
 * [ ] Arrow collision (up/down) sound
 * [ ] Get a point sound
+* [ ] Victory fanfare
 
 ## Needs refining
 
