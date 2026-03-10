@@ -1,13 +1,6 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-## Audio
-* [x] Arrow collision (up/down) sound
-* [x] Send sound
-* [x] Battery max charge sound
-* [x] Stop sound
-* [x] Get a point sound
-* [x] Victory fanfare
 
 ## Needs refining
 
