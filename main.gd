@@ -23,6 +23,7 @@ func player_1_scores(body: Node2D) -> void:
         if player_1_score >= 10 and not $VictoryText.visible:
             $VictoryText.visible = true
             $VictoryText/Label.text = 'The winner is\n Player 1'
+            $SFX/PlayerWins.play()
             
 
 func player_2_scores(body: Node2D) -> void:
@@ -34,6 +35,7 @@ func player_2_scores(body: Node2D) -> void:
         if player_2_score >= 10 and not $VictoryText.visible:
             $VictoryText.visible = true
             $VictoryText/Label.text = 'The winner is\n Player 2'
+            $SFX/PlayerWins.play()
 
 func timer_progress(timer: Timer) -> float:
     return 1.0 - (timer.time_left / timer.wait_time)
