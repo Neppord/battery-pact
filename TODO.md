@@ -1,22 +1,19 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
+* [ ] The "yellow" toy should point the way it travels
+  - it should be rotated together with its velocity when sent
+
+* [ ] Look over the use of bools to get true one-shot plays for SFX
+  * [ ] Enter state trigger 
 
 ## Needs refining
 
-* [ ] Recolour cars
-  * [ ] Red
-  * [ ] Yellow
-
 * [ ] New movement patterns
-  * [ ] Diagonal
   * [ ] Teleport
   * [ ] Random
   * [ ] Evade
   * [ ] Lane-skip at intervals
-
-* [ ] Make it more fun to win
-    * [ ] Add a fanfare sound
 
 * [ ] Take all parameters/effects and design toys
   * [ ] Standard toys
@@ -64,6 +61,9 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [ ] Adjust cooldown timer
   * [ ] 0.1s instead
+
+* [ ] Sprites
+  * [ ] Fifth element taxi
 
 ## juicy stuff!
 
