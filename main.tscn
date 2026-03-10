@@ -12,6 +12,9 @@
 [ext_resource type="AudioStream" uid="uid://bfgy3oytquhn5" path="res://sfx/ArrowBlock 1.wav" id="10_dg77c"]
 [ext_resource type="AudioStream" uid="uid://dhn2so5p27nee" path="res://sfx/ArrowBlock 2.wav" id="11_ycdy4"]
 [ext_resource type="AudioStream" uid="uid://1cypw7bxq52o" path="res://sfx/ArrowBlock 3.wav" id="12_w48qg"]
+[ext_resource type="AudioStream" uid="uid://b8iiqc72e8c2c" path="res://sfx/Battery max 1.wav" id="13_vivmo"]
+[ext_resource type="AudioStream" uid="uid://c26fhkrodd748" path="res://sfx/Battery max 2.wav" id="14_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://bjtu7ixjqpsr5" path="res://sfx/Battery max 3.wav" id="15_yaehf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
 atlas = ExtResource("2_0xm2m")
@@ -104,6 +107,12 @@ streams_count = 3
 stream_0/stream = ExtResource("10_dg77c")
 stream_1/stream = ExtResource("11_ycdy4")
 stream_2/stream = ExtResource("12_w48qg")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_074og"]
+streams_count = 3
+stream_0/stream = ExtResource("13_vivmo")
+stream_1/stream = ExtResource("14_2cqfq")
+stream_2/stream = ExtResource("15_yaehf")
 
 [node name="Node2D" type="Node2D" unique_id=522391310]
 script = ExtResource("1_7mycd")
@@ -321,6 +330,10 @@ bus = &"SFX"
 
 [node name="ArrowCollision" type="AudioStreamPlayer2D" parent="SFX" unique_id=1105872938]
 stream = SubResource("AudioStreamRandomizer_vivmo")
+bus = &"SFX"
+
+[node name="BatteryMaxCharge" type="AudioStreamPlayer2D" parent="SFX" unique_id=1342309056]
+stream = SubResource("AudioStreamRandomizer_074og")
 bus = &"SFX"
 
 [connection signal="spawned_toy" from="Player1Arrow" to="." method="spawn_left"]

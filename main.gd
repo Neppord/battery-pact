@@ -59,17 +59,32 @@ func spawn(toy_scene: PackedScene,toy_position: Vector2, direction: Vector2, cha
     get_tree().current_scene.add_child(toy) # or add_child(toy) depending on where you want it
     toy.global_position = toy_position
     toy.direction *= direction
-    toy.charge = charge
+    toy.charge = charge 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     pass # Replace with function body.
 
+var player_1_at_max_charge: bool = false
+var player_2_at_max_charge: bool = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
     var progress1 := timer_progress(player_1_battery)
     $HUD/ChargeBar1.value = progress1 * 100
     var progress2 := timer_progress(player_2_battery)
     $HUD/ChargeBar2.value = progress2 * 100
+    
+    if progress1 >= 1  and not player_1_at_max_charge:
+        player_1_at_max_charge = true
+        $SFX/BatteryMaxCharge.play()
+    if progress1 < 1:
+        player_1_at_max_charge = false
+        
+    if progress2 >= 1  and not player_2_at_max_charge:
+        player_2_at_max_charge = true
+        $SFX/BatteryMaxCharge.play()
+        
+    if progress2 < 1:
+        player_2_at_max_charge = false
     
     if Input.is_action_just_pressed("player_1_left"):
         player_1_toy_index = (player_1_toy_index - 1) % toys.size()

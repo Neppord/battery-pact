@@ -2,10 +2,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
 ## Audio
-* [ ] Toy travel sound
-* [ ] Battery max charge sound
+* [x] Arrow collision (up/down) sound
+* [x] Send sound
+* [x] Battery max charge sound
 * [ ] Stop sound
-* [ ] Arrow collision (up/down) sound
 * [ ] Get a point sound
 * [ ] Victory fanfare
 
