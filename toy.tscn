@@ -2,19 +2,15 @@
 
 [ext_resource type="Script" uid="uid://yp5n1lswdn0y" path="res://toy.gd" id="1_4kfnp"]
 [ext_resource type="Texture2D" uid="uid://c1uq6oijxfhwg" path="res://aseprite/neon-toy-car.png" id="1_tvsie"]
-[ext_resource type="AudioStream" uid="uid://bnsvlcvh0vi0e" path="res://sfx/shoot.wav" id="3_o3ecr"]
-[ext_resource type="AudioStream" uid="uid://clvpoao5ac7lu" path="res://sfx/hit.wav" id="4_7crt5"]
-[ext_resource type="AudioStream" uid="uid://c55o21di6s17t" path="res://sfx/break.wav" id="5_okrti"]
+[ext_resource type="AudioStream" uid="uid://cj1rg1ptclrxe" path="res://sfx/Toy collision.wav" id="3_032ar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
 size = Vector2(139, 69)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdnoh"]
-random_pitch = 1.1362262
-streams_count = 3
-stream_0/stream = ExtResource("3_o3ecr")
-stream_1/stream = ExtResource("4_7crt5")
-stream_2/stream = ExtResource("5_okrti")
+random_pitch = 1.1892071
+streams_count = 1
+stream_0/stream = ExtResource("3_032ar")
 
 [node name="Toy" type="RigidBody2D" unique_id=1072743980]
 position = Vector2(-5, 0)
@@ -34,5 +30,6 @@ texture = ExtResource("1_tvsie")
 
 [node name="SFX player" type="AudioStreamPlayer2D" parent="." unique_id=1251227886]
 stream = SubResource("AudioStreamRandomizer_gdnoh")
+volume_db = -2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,7 +1,7 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [ ] Update sounds
+* [x] Update sounds
 * [ ] Introduce the concept of a state machine
 * [ ] Look over the use of bools to get true one-shot plays for SFX
     * [ ] Enter state trigger
