@@ -16,12 +16,39 @@ var player_2_toy_index = 0
 @onready var victory_text: Panel = $VictoryText
 @onready var victory_text_label: Label = $VictoryText/Label
 @onready var player_wins: AudioStreamPlayer2D = $SFX/PlayerWins
+@onready var player_1: Player = Player.new(
+    1, 
+    player_1_scoretext,
+    $HUD/Player1ToyIndicator,
+    player_1_battery, 
+    player_1_cooldown,
+    )
 var player_1_score: int = 0
 var player_2_score: int = 0
 var round_state: GameStarted = GameStarted.new(self)
 var game_won_by_player_1: GameWon = GameWon.new(self, 1)
 var game_won_by_player_2: GameWon = GameWon.new(self, 2)
 var state: State = round_state
+
+
+class Player:
+    var score
+    var maxcharge
+    var name
+    var battery_timer
+    var cooldown_timer
+    var score_label
+    var toy_index_label
+    var toy_index
+    
+    func _init(_name, _score_label, _toy_label_index, _battery_timer, _cooldown_timer) -> void: 
+        self.score = 0
+        self.maxcharge = false
+        self.name = _name
+        self.battery_timer = _battery_timer
+        self.score_label = _score_label
+        self.toy_index = 0
+        self.cooldown_timer = _cooldown_timer
 
 class State: 
     var main

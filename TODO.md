@@ -18,12 +18,14 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
     * [ ] Various soundrelated things
   * [ ] Evaluate how to apply this in Toy
 * [ ] Introduce player class
-  * [ ] Player name
-  * [ ] Toy index
-  * [ ] Index label
-  * [ ] Timer?
-  * [ ] Max charge
-  * [ ] Score
+  * [x] Player name
+  * [x] Toy index
+  * [x] Index label
+  * [x] Timer
+  * [x] Max charge
+  * [x] Score
+  * [x] And more
+  * [ ] Add type declarations
 * [ ] Look over the use of bools to get true one-shot plays for SFX
     * [ ] Enter state trigger
 
