@@ -1,11 +1,14 @@
 Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 ## Important stuff!
 
-* [ ] The "yellow" toy should point the way it travels
-  - it should be rotated together with its velocity when sent
-
+* [ ] Update sounds
+* [ ] Introduce the concept of a state machine
 * [ ] Look over the use of bools to get true one-shot plays for SFX
-  * [ ] Enter state trigger 
+    * [ ] Enter state trigger
+
+* [ ] The "yellow" toy should point the way it travels
+    - it should be rotated together with its velocity when sent
+
 
 ## Needs refining
 
