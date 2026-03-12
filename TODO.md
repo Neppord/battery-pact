@@ -4,10 +4,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 * [x] Update sounds
 * [ ] Introduce the concept of a state machine
   * [x] Create a state class - needs a reference to the scene
-  * [ ] Create two methods, `Enter` and `Exit`
-    * [ ] Enter
-    * [ ] Exit
-    * [ ] Check that these have the other as argument
+  * [x] Create two methods, `Enter` and `Exit`
+    * [x] Enter
+    * [x] Exit
+    * [x] Check that these have the other as argument
   * [ ] Create state classes for each game state
     * [ ] Main
       * [ ] Round

@@ -18,6 +18,11 @@ class State:
 
     func _init(_main) -> void:
         self.main = _main
+    
+    func enter(from: State):
+        pass
+    func exit(to: State):
+        pass
 
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
