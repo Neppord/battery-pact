@@ -12,13 +12,15 @@ var player_2_toy_index = 0
 @onready var player_2_battery: Timer = $HUD/ChargeBar2/Timer
 @onready var player_scores: AudioStreamPlayer2D = $SFX/PlayerScores
 @onready var player_1_scoretext: Label = $HUD/Player1Score
+@onready var player_2_scoretext: Label = $HUD/Player2Score
 @onready var victory_text: Panel = $VictoryText
 @onready var victory_text_label: Label = $VictoryText/Label
 @onready var player_wins: AudioStreamPlayer2D = $SFX/PlayerWins
 var player_1_score: int = 0
 var player_2_score: int = 0
 var round_state: GameStarted = GameStarted.new(self)
-var playerwon: GameWon = GameWon.new(self)
+var game_won_by_player_1: GameWon = GameWon.new(self, 1)
+var game_won_by_player_2: GameWon = GameWon.new(self, 2)
 var state: State = round_state
 
 class State: 
@@ -33,6 +35,8 @@ class State:
         pass
     func player1_scores():
         pass
+    func player2_scores():
+        pass
 
 class GameStarted extends State:
     func player1_scores():
@@ -40,13 +44,27 @@ class GameStarted extends State:
         main.player_1_score += 1
         main.player_1_scoretext.text = str(main.player_1_score)
         if main.player_1_score >= 10:
-            exit(main.playerwon)
-            main.state = main.playerwon
+            exit(main.game_won_by_player_1)
+            main.state = main.game_won_by_player_1
             main.state.enter(self)
+    func player2_scores():
+        main.player_scores.play()
+        main.player_2_score += 1
+        main.player_2_scoretext.text = str(main.player_2_score)
+        if main.player_2_score >= 10:
+            exit(main.game_won_by_player_2)
+            main.state = main.game_won_by_player_2
+            main.state.enter(self)
+
 class GameWon extends State:
+    var player
+    func _init(_main, _player) -> void:
+        super(_main)
+        self.player = _player
+
     func enter(from: State):
         main.victory_text.visible = true
-        main.victory_text_label.text = 'The winner is\n Player 1'
+        main.victory_text_label.text = 'The winner is\n Player ' + str(player)
         main.player_wins.play()
         pass
 
@@ -57,15 +75,8 @@ func player_1_scores(body: Node2D) -> void:
 
 func player_2_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
-        $SFX/PlayerScores.play()
-        player_2_score += 1
-        $HUD/Player2Score.text = str(player_2_score)
+        state.player2_scores()
         body.queue_free()
-        if player_2_score >= 10 and not $VictoryText.visible:
-            state = playerwon
-            $VictoryText.visible = true
-            $VictoryText/Label.text = 'The winner is\n Player 2'
-            $SFX/PlayerWins.play()
 
 func timer_progress(timer: Timer) -> float:
     return 1.0 - (timer.time_left / timer.wait_time)
