@@ -13,7 +13,12 @@ var player_2_toy_index = 0
 
 var player_1_score: int = 0
 var player_2_score: int = 0
- 
+class State: 
+    var main
+
+    func _init(_main) -> void:
+        self.main = _main
+
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
         $SFX/PlayerScores.play()
