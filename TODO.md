@@ -3,6 +3,17 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
 
 * [x] Update sounds
 * [ ] Introduce the concept of a state machine
+  * [ ] Create a state class - needs a reference to the scene
+  * [ ] Create two methods, `Enter` and `Exit`
+    * [ ] Enter
+    * [ ] Exit
+    * [ ] Check that these have the other as argument
+  * [ ] Create state classes for each game state
+    * [ ] Main
+      * [ ] Round
+      * [ ] Player won
+  * [ ] Evaluate how to apply this in Toy
+  * [ ] Use this to call sounds bool-free
 * [ ] Look over the use of bools to get true one-shot plays for SFX
     * [ ] Enter state trigger
 
