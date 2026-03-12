@@ -31,11 +31,11 @@ class State:
         pass
     func exit(to: State):
         pass
-    func foo():
+    func player1_scores():
         pass
 
 class Round extends State:
-    func foo():
+    func player1_scores():
         main.player_scores.play()
         main.player_1_score += 1
         main.player_1_scoretext.text = str(main.player_1_score)
@@ -52,7 +52,7 @@ class PlayerWon extends State:
 
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
-        state.foo()
+        state.player1_scores()
         body.queue_free()
 
 func player_2_scores(body: Node2D) -> void:
