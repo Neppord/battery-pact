@@ -13,8 +13,17 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
       * [x] Round
       * [x] Player won
   * [ ] Use states to decide behavior
+    * [x] Gamewon
+    * [x] Gamestarted
+    * [ ] Various soundrelated things
   * [ ] Evaluate how to apply this in Toy
-  * [ ] Check that sounds use the state machine
+* [ ] Introduce player class
+  * [ ] Player name
+  * [ ] Toy index
+  * [ ] Index label
+  * [ ] Timer?
+  * [ ] Max charge
+  * [ ] Score
 * [ ] Look over the use of bools to get true one-shot plays for SFX
     * [ ] Enter state trigger
 
