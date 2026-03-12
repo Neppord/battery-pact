@@ -8,10 +8,10 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
     * [x] Enter
     * [x] Exit
     * [x] Check that these have the other as argument
-  * [ ] Create state classes for each game state
-    * [ ] Main
-      * [ ] Round
-      * [ ] Player won
+  * [x] Create state classes for each game state
+    * [x] Main
+      * [x] Round
+      * [x] Player won
   * [ ] Evaluate how to apply this in Toy
   * [ ] Use this to call sounds bool-free
 * [ ] Look over the use of bools to get true one-shot plays for SFX

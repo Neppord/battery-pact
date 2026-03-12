@@ -24,6 +24,12 @@ class State:
     func exit(to: State):
         pass
 
+class Round extends State:
+    pass
+    
+class PlayerWon extends State:
+    pass
+
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
         $SFX/PlayerScores.play()
