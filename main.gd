@@ -17,8 +17,8 @@ var player_2_toy_index = 0
 @onready var player_wins: AudioStreamPlayer2D = $SFX/PlayerWins
 var player_1_score: int = 0
 var player_2_score: int = 0
-var round_state: Round = Round.new(self)
-var playerwon: PlayerWon = PlayerWon.new(self)
+var round_state: GameStarted = GameStarted.new(self)
+var playerwon: GameWon = GameWon.new(self)
 var state: State = round_state
 
 class State: 
@@ -34,7 +34,7 @@ class State:
     func player1_scores():
         pass
 
-class Round extends State:
+class GameStarted extends State:
     func player1_scores():
         main.player_scores.play()
         main.player_1_score += 1
@@ -43,7 +43,7 @@ class Round extends State:
             exit(main.playerwon)
             main.state = main.playerwon
             main.state.enter(self)
-class PlayerWon extends State:
+class GameWon extends State:
     func enter(from: State):
         main.victory_text.visible = true
         main.victory_text_label.text = 'The winner is\n Player 1'
