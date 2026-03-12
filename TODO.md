@@ -12,8 +12,9 @@ Co-authored-by: Karl Wängberg <karlwangberg@gmail.com>
     * [x] Main
       * [x] Round
       * [x] Player won
+  * [ ] Use states to decide behavior
   * [ ] Evaluate how to apply this in Toy
-  * [ ] Use this to call sounds bool-free
+  * [ ] Check that sounds use the state machine
 * [ ] Look over the use of bools to get true one-shot plays for SFX
     * [ ] Enter state trigger
 

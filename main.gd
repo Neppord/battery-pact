@@ -10,9 +10,17 @@ var player_2_toy_index = 0
 @onready var toy_send: AudioStreamPlayer2D = $SFX/ToySend
 @onready var player_1_battery: Timer = $HUD/ChargeBar1/Timer
 @onready var player_2_battery: Timer = $HUD/ChargeBar2/Timer
-
+@onready var player_scores: AudioStreamPlayer2D = $SFX/PlayerScores
+@onready var player_1_scoretext: Label = $HUD/Player1Score
+@onready var victory_text: Panel = $VictoryText
+@onready var victory_text_label: Label = $VictoryText/Label
+@onready var player_wins: AudioStreamPlayer2D = $SFX/PlayerWins
 var player_1_score: int = 0
 var player_2_score: int = 0
+var round_state: Round = Round.new(self)
+var playerwon: PlayerWon = PlayerWon.new(self)
+var state: State = round_state
+
 class State: 
     var main
 
@@ -23,24 +31,29 @@ class State:
         pass
     func exit(to: State):
         pass
+    func foo():
+        pass
 
 class Round extends State:
-    pass
-    
+    func foo():
+        main.player_scores.play()
+        main.player_1_score += 1
+        main.player_1_scoretext.text = str(main.player_1_score)
+        if main.player_1_score >= 10:
+            exit(main.playerwon)
+            main.state = main.playerwon
+            main.state.enter(self)
 class PlayerWon extends State:
-    pass
+    func enter(from: State):
+        main.victory_text.visible = true
+        main.victory_text_label.text = 'The winner is\n Player 1'
+        main.player_wins.play()
+        pass
 
 func player_1_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
-        $SFX/PlayerScores.play()
-        player_1_score += 1
-        $HUD/Player1Score.text = str(player_1_score)
+        state.foo()
         body.queue_free()
-        if player_1_score >= 10 and not $VictoryText.visible:
-            $VictoryText.visible = true
-            $VictoryText/Label.text = 'The winner is\n Player 1'
-            $SFX/PlayerWins.play()
-            
 
 func player_2_scores(body: Node2D) -> void:
     if body.is_in_group("toy"):
@@ -49,6 +62,7 @@ func player_2_scores(body: Node2D) -> void:
         $HUD/Player2Score.text = str(player_2_score)
         body.queue_free()
         if player_2_score >= 10 and not $VictoryText.visible:
+            state = playerwon
             $VictoryText.visible = true
             $VictoryText/Label.text = 'The winner is\n Player 2'
             $SFX/PlayerWins.play()
