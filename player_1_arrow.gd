@@ -37,4 +37,4 @@ func _process(delta: float) -> void:
     self.position.y = player_positions[lane]
     
     if Input.is_action_just_pressed("player_1_spawn"):
-        spawned_toy.emit(Vector2(global_position.x, player_positions[lane] + y_offset))
+        spawned_toy.emit(global_position)
