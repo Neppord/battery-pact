@@ -6,12 +6,12 @@ const movement = 160
 
 signal spawned_toy(position: Vector2)
 
-const player_positions: Array[int] = [
-    75,
-    235,
-    395,
-    555,
-    715,
+const player_positions: Array[float] = [
+    75.,
+    235.,
+    395.,
+    555.,
+    715.,
 ]
 
 var lane: int = 1
