@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b2edfmdarwhwm" path="res://toy2.gd" id="1_gjsum"]
 [ext_resource type="Texture2D" uid="uid://crjbsgcukerwm" path="res://aseprite/neon-toy-yellow.png" id="2_gjsum"]
-[ext_resource type="AudioStream" uid="uid://c5gyd5mhkym86" path="res://sfx/Toy collision.wav" id="3_dp4vp"]
+[ext_resource type="AudioStream" uid="uid://cj1rg1ptclrxe" path="res://sfx/Toy collision.wav" id="3_dp4vp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
-size = Vector2(139, 69)
+size = Vector2(139, 70)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdnoh"]
 random_pitch = 1.1362262
@@ -19,11 +19,10 @@ max_contacts_reported = 16
 script = ExtResource("1_gjsum")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173025041]
-position = Vector2(5.5, -34.5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_fe3bf")
 
 [node name="NeonToyCar" type="Sprite2D" parent="." unique_id=831308392]
-position = Vector2(4.9999995, -38.999996)
 scale = Vector2(10, 10)
 texture = ExtResource("2_gjsum")
 

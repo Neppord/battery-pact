@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cj1rg1ptclrxe" path="res://sfx/Toy collision.wav" id="3_032ar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe3bf"]
-size = Vector2(139, 69)
+size = Vector2(139, 69.25)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdnoh"]
 random_pitch = 1.1892071
@@ -13,18 +13,16 @@ streams_count = 1
 stream_0/stream = ExtResource("3_032ar")
 
 [node name="Toy" type="RigidBody2D" unique_id=1072743980]
-position = Vector2(-5, 0)
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 16
 script = ExtResource("1_4kfnp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173025041]
-position = Vector2(5.5, -34.5)
+position = Vector2(0, 4.625)
 shape = SubResource("RectangleShape2D_fe3bf")
 
 [node name="NeonToyCar" type="Sprite2D" parent="." unique_id=831308392]
-position = Vector2(4.9999995, -38.999996)
 scale = Vector2(10, 10)
 texture = ExtResource("1_tvsie")
 
