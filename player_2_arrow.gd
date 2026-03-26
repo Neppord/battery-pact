@@ -15,7 +15,6 @@ const player_positions: Array[float] = [
 ]
 
 var lane: int = 1
-const y_offset: float = 80.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
