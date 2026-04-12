@@ -1,9 +1,7 @@
 extends AnimatedSprite2D
-
+ 
 @export var toy_scene: PackedScene
-
-const movement = 160
-
+ 
 signal spawned_toy(position: Vector2)
 
 const player_positions: Array[float] = [
