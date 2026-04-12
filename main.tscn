@@ -143,6 +143,10 @@ frame = 2
 frame_progress = 0.45285094
 script = ExtResource("3_h2yge")
 toy_scene = ExtResource("4_lquwl")
+up_action = "player_1_up"
+down_action = "player_1_down"
+spawn_action = "player_1_spawn"
+
 
 [node name="Player2Arrow" type="AnimatedSprite2D" parent="." unique_id=138238865]
 position = Vector2(1822, 237.00002)
