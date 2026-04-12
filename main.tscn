@@ -155,6 +155,10 @@ sprite_frames = SubResource("SpriteFrames_efxa6")
 autoplay = "default"
 script = ExtResource("4_1bvp3")
 toy_scene = ExtResource("4_lquwl")
+up_action = "player_2_up"
+down_action = "player_2_down"
+spawn_action = "player_2_spawn"
+
 
 [node name="Player1Timer" type="Timer" parent="." unique_id=1442398266]
 one_shot = true

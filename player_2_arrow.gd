@@ -1,6 +1,10 @@
 extends AnimatedSprite2D
  
 @export var toy_scene: PackedScene
+@export var up_action: String = "player_2_up"
+@export var down_action: String = "player_2_down"
+@export var spawn_action: String = "player_2_spawn"
+
  
 signal spawned_toy(position: Vector2)
 
@@ -21,10 +25,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-    if Input.is_action_just_pressed("player_2_up"):
+    if Input.is_action_just_pressed(up_action):
         lane -= 1
         
-    if Input.is_action_just_pressed("player_2_down"):
+    if Input.is_action_just_pressed(down_action):
         lane += 1
     
     var tmp_lane: int = lane
@@ -34,5 +38,5 @@ func _process(delta: float) -> void:
 
     self.position.y = player_positions[lane]
     
-    if Input.is_action_just_pressed("player_2_spawn"):
+    if Input.is_action_just_pressed(spawn_action):
         spawned_toy.emit(global_position)
