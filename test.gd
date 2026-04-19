@@ -13,10 +13,8 @@ func specs() -> Array[String]:
     return names
     
 func _init():
-    # find all files in the tests folder that ends in _spec.gd
-    # loop over them and take the spec filed from them and run it in the printer
     for spec_file in specs():
         var spec = load(spec_file).new().spec
-        spec.run(Printer.new())
+        spec.run(TAPRunner.new())
     quit()
 
