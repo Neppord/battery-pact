@@ -1,53 +1,22 @@
-extends SceneTree
+class_name Test extends SceneTree
 
-class Spec:
-    var desc: String
-    var scope: Callable
-    func _init(desc:String, scope: Callable):
-        self.desc = desc
-        self.scope = scope
+func specs() -> Array[String]:
+    var root := "res://tests/"
+    var dir := DirAccess.open(root)
+    var names: Array[String] = [] 
+    dir.list_dir_begin()
+    var name := dir.get_next()
+    while name != '':
+        if name.match("*_spec.gd"):
+            names.append(root + name)
+        name = dir.get_next()
+    return names
     
-    func run(t: Runner):
-        t.describe(desc, scope)
-
-class Runner:
-    func describe(desc: String, scope: Callable): pass
-    func it(desc: String, scope: Callable): pass
-
-class Printer extends Runner:
-    var indent: int = 0
-    
-    func describe(desc: String, scope: Callable):
-        print("  ".repeat(indent) + desc)
-        indent += 1;
-        scope.call(self)
-        indent -= 1;
-        
-    func it(desc: String, scope: Callable):
-        print("  ".repeat(indent) + "it " + desc)
-        indent += 1;
-        scope.call(self)
-        indent -= 1;
-
-var spec: Spec = Spec.new("A BDD Test Framework", func(t: Runner):
-   t.describe("The describe function", func(t: Runner):
-       t.it("creates a new suite", func(t: Runner):
-           pass
-       )
-       t.describe("when nested", func(t: Runner):
-           t.it("is indented correctly", func(t: Runner):
-               pass
-           )
-       )
-   )
-   t.describe("The it function", func(t: Runner):
-       t.it("creates a new test", func(t: Runner):
-           pass
-       )
-   )
-)
-
 func _init():
-    spec.run(Printer.new())
+    # find all files in the tests folder that ends in _spec.gd
+    # loop over them and take the spec filed from them and run it in the printer
+    for spec_file in specs():
+        var spec = load(spec_file).new().spec
+        spec.run(Printer.new())
     quit()
 

@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Toy 
 
 @onready var sprite: Sprite2D = $NeonToyCar
 @onready var sfx_player: AudioStreamPlayer2D = $"SFX player"
