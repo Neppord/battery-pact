@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-godot --headless -s test.gd | npx tap-mocha-reporter spec
+godot --headless --import --quiet
+godot --no-header --headless -s test.gd | npx tap-mocha-reporter spec
